@@ -34,4 +34,8 @@ public class Kolekce {
             System.err.println(e.getLocalizedMessage());
         }
     }
+
+    public List<Zakaznik> ziskejSeznamZakazniku(){
+        return seznamZakazniku;
+    }
 }
