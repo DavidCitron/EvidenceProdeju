@@ -25,7 +25,7 @@ public class Zakaznik {
         this.pocetProdeju = pocetProdeju;
     }
 
-    void zvysPocetProdeju(int pocet) {
+    public void zvysPocetProdeju(int pocet) {
         try {
             if (pocet <= 0) {
                 throw new IOException();
