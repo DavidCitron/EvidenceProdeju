@@ -1,3 +1,5 @@
+import java.io.IOException;
+
 public class Zakaznik {
     private String jmeno;
     private int pocetProdeju;
@@ -23,7 +25,15 @@ public class Zakaznik {
         this.pocetProdeju = pocetProdeju;
     }
 
-    void zvysPocetProdeju(int pocet){
-
+    void zvysPocetProdeju(int pocet) {
+        try {
+            if (pocet <= 0) {
+                throw new IOException();
+            }else {
+                pocetProdeju+=pocet;
+            }
+        }catch (IOException e){
+            System.err.println("Nemůžete zvýšit počet prodejů o nulu nebo záporné číslo");
+        }
     }
 }
